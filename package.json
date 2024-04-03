@@ -1,7 +1,7 @@
 {
 	"name": "console-buffer",
 	"description": "Buffer calls to console.log, console.warn, etc. for high performance logging",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"author": "Dani Glore (https://github.com/Floofies)",
 	"contributors": [
 		"Dave Eddy <dave@daveeddy.com> (http://www.daveeddy.com)"
@@ -21,7 +21,7 @@
 	"scripts": {
 		"bundle": "browserify ./index.js -s consoleBuffer -o ./dist/console-buffer.js && uglifyjs ./dist/console-buffer.js -o ./dist/console-buffer.min.js",
 		"prepare": "npm run test && npm run bundle",
-		"test": "for f in tests/*; do echo \"$f\"; node \"$f\"; done; echo 'passed!'; exit 0"
+		"test": "test.sh"
 
 	},
 	"main": "index.js",
